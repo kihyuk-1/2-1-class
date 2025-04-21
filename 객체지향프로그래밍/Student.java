@@ -1,23 +1,61 @@
-package pro0317;
+package ch7;
 
+
+//¼³°èµµ
 public class Student {
-	   String name;  // ì´ë¦„
-	    int stuId;    // í•™ë²ˆ
-	    int age;      // ë‚˜ì´
+	
+	// 1. ¼Ó¼º -> ÀÌ¸§ , ÇĞ¹ø , ÇĞ°ú , °ú¸ñ (Ä¸½¶È­)
+    private String name;
+    private String hb;
+    private String dept;
+    private String gwamok;
 
+    // ±âº» »ı¼ºÀÚ
+    Student() {}
 
-	    // ìƒì„±ì
-	     public Student(String name, int stuId, int age) {
-	        this.name = name;
-	        this.stuId = stuId;
-	        this.age = age;
-	    }
+    // »ı¼ºÀÚ
+    Student(String name, String hb, String dept, String gwamok) {
+        this.name = name;
+        this.hb = hb;
+        this.dept = dept;
+        this.gwamok = gwamok;
+    }
 
-	    // í•™ìƒ
-	     public void info() {
-	         System.out.println("ì´ë¦„: " + name + ", í•™ë²ˆ: " + stuId + ", ë‚˜ì´: " + age);
-	     }
+    // Getter¿Í Setter ¸Ş¼­µåµé (ÇÊ¿ä¿¡ µû¶ó ¼öÁ¤)
+    public String getName() {
+        return name;
+    }
 
+    public void setName(String name) {
+        this.name = name;
+    }
 
+    public String getHb() {
+        return hb;
+    }
+
+    public void setHb(String hb) {
+        this.hb = hb;
+    }
+
+    public String getDept() {
+        return dept;
+    }
+
+    public void setDept(String dept) {
+        this.dept = dept;
+    }
+
+    public String getGwamok() {
+        return gwamok;
+    }
+
+    public void setGwamok(String gwamok) {
+        this.gwamok = gwamok;
+    }
+
+    @Override
+    public String toString() {
+        return "Student [name=" + name + ", hb=" + hb + ", dept=" + dept + ", gwamok=" + gwamok + "]";
+    }
 }
-
